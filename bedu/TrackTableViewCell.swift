@@ -96,7 +96,8 @@ class TrackTableViewCell: UITableViewCell {
    @objc func botonPlayTouch(_ sender:UIButton!) {
        if parent != nil {
            parent?.buttonTouchedOnCell(aCell: self)
-                   }
+           print("This is the track ------------------", track)
+       }
         else{
             print("TOUCH")
             }

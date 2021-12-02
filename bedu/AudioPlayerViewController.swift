@@ -13,6 +13,9 @@ class AudioPlayerViewController: UIViewController {
     
     var isPlaying = true
     var song: AudioPlayer?
+    var tituloCancion: String?
+    var artistaCancion: String?
+    
     var timer = Timer()
     var slider = UISlider()
     
@@ -66,7 +69,7 @@ class AudioPlayerViewController: UIViewController {
         self.view.backgroundColor = UIColor(named: "Color1")
     
         let label1 = UILabel()
-            label1.text = "TEMITAS player"
+        label1.text = self.tituloCancion
             label1.font = UIFont.systemFont(ofSize: 30)
             label1.textColor = UIColor(named: "Color2" )
             //label1.backgroundColor = UIColor(red:0.0, green: 1.0, blue: 0.5, alpha:0.75)
@@ -76,8 +79,14 @@ class AudioPlayerViewController: UIViewController {
             label1.textAlignment = .center
             self.view.addSubview(label1)
         
-        
-        
+//        let artistLabel=UILabel()
+//        artistLabel.text = self.artistaCancion
+//        artistLabel.textColor = UIColor(named: "Color2")
+//        artistLabel.autoresizingMask = .flexibleWidth
+//        artistLabel.translatesAutoresizingMaskIntoConstraints=true
+//        artistLabel.frame=CGRect(x: 0, y: 70, width: 100, height: 40)
+//        self.view.addSubview(artistLabel)
+
         
         buttonPlay.frame = CGRect(x: 20, y:100, width: 100, height: 40)
         buttonPlay.addTarget(self, action: #selector(play), for: .touchUpInside)

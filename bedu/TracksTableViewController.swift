@@ -18,9 +18,13 @@ class TracksTableViewController: UITableViewController, ButtonOnCellDelegate {
         
         guard let index = tableView.indexPath(for: aCell) else {return}
         let titleName = misTracks[index.item]
-        self.delegado?.sendData(track: titleName.title)
+        //self.delegado?.sendData(track: titleName.title)
+        let songTitle = titleName.title
+        let songArtist = titleName.artist
         
         let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "SongViewController") as? AudioPlayerViewController
+        vc?.tituloCancion = songTitle
+        vc?.artistaCancion = songArtist
         self.present(vc!, animated: true)
         
         //let audioPlayer = AudioPlayerViewController()

@@ -17,7 +17,7 @@ protocol TableViewControllerDelegate {
 }
 
 protocol TracksPickerDelegate {
-    func addTrack(objetoTrack: Track)
+    func addTrack(track: Track)
 }
 
 //dos protocols son necesarios: delegate y

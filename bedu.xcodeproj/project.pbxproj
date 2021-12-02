@@ -25,7 +25,9 @@
 		1F618C47273DD85600883F2F /* TrackTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F618C46273DD85600883F2F /* TrackTableViewCell.swift */; };
 		1F618C4B273DD8FD00883F2F /* UIImage+animatedGIF.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F618C4A273DD8FD00883F2F /* UIImage+animatedGIF.m */; };
 		1F618C4D273DD9EE00883F2F /* stegosaurus-studio.gif in Resources */ = {isa = PBXBuildFile; fileRef = 1F618C4C273DD9EE00883F2F /* stegosaurus-studio.gif */; };
-		1F798725275865D100F94ED1 /* TracksPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F798724275865D100F94ED1 /* TracksPickerView.swift */; };
+		1FB711EF27587CED0048BF50 /* PlayListDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB711EE27587CED0048BF50 /* PlayListDetailController.swift */; };
+		1FB711F127587CF20048BF50 /* TracksPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB711F027587CF20048BF50 /* TracksPickerView.swift */; };
+		1FB711F327587CF80048BF50 /* PlayButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB711F227587CF80048BF50 /* PlayButton.swift */; };
 		1FD1A9E327394C350025028B /* apunts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FD1A9E227394C350025028B /* apunts.swift */; };
 		1FD1A9E527394C7F0025028B /* apunts.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 1FD1A9E427394C7F0025028B /* apunts.rtf */; };
 		1FD1AA332739C16C0025028B /* TracksTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FD1AA322739C16C0025028B /* TracksTableViewController.swift */; };
@@ -79,7 +81,9 @@
 		1F618C49273DD8FD00883F2F /* UIImage+animatedGIF.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+animatedGIF.h"; sourceTree = "<group>"; };
 		1F618C4A273DD8FD00883F2F /* UIImage+animatedGIF.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+animatedGIF.m"; sourceTree = "<group>"; };
 		1F618C4C273DD9EE00883F2F /* stegosaurus-studio.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "stegosaurus-studio.gif"; sourceTree = "<group>"; };
-		1F798724275865D100F94ED1 /* TracksPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TracksPickerView.swift; sourceTree = "<group>"; };
+		1FB711EE27587CED0048BF50 /* PlayListDetailController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayListDetailController.swift; sourceTree = "<group>"; };
+		1FB711F027587CF20048BF50 /* TracksPickerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TracksPickerView.swift; path = "../../Módulo-03 terminado/Sesión-07/MyApp/MyApp/TracksPickerView.swift"; sourceTree = "<group>"; };
+		1FB711F227587CF80048BF50 /* PlayButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayButton.swift; sourceTree = "<group>"; };
 		1FD1A9E227394C350025028B /* apunts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = apunts.swift; sourceTree = "<group>"; };
 		1FD1A9E427394C7F0025028B /* apunts.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = apunts.rtf; sourceTree = "<group>"; };
 		1FD1AA322739C16C0025028B /* TracksTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TracksTableViewController.swift; sourceTree = "<group>"; };
@@ -147,29 +151,24 @@
 		1F27279E272F3C130039754D /* bedu */ = {
 			isa = PBXGroup;
 			children = (
-				1F618C4C273DD9EE00883F2F /* stegosaurus-studio.gif */,
+				1FB711F5275880710048BF50 /* Utils */,
+				1FB711F427587F190048BF50 /* Assets-folder */,
 				1FF86252273157E60070CAFE /* RegisterViewController.swift */,
 				1F2727A3272F3C130039754D /* LoginViewController.swift */,
 				1F2727A1272F3C130039754D /* SceneDelegate.swift */,
 				1FF8625427315EA30070CAFE /* MainViewController.swift */,
-				1FD768502734B3CE00B5117C /* Protocols.swift */,
-				1F798724275865D100F94ED1 /* TracksPickerView.swift */,
+				1FB711F227587CF80048BF50 /* PlayButton.swift */,
 				1F27279F272F3C130039754D /* AppDelegate.swift */,
-				1FE27F2F2734B11000C9F2CE /* Modelos.swift */,
 				1FD7685227356F5400B5117C /* AudioPlayerViewController.swift */,
 				1FD1AA322739C16C0025028B /* TracksTableViewController.swift */,
 				1F618C46273DD85600883F2F /* TrackTableViewCell.swift */,
-				1F4F617027580B31003E7433 /* DataManager.swift */,
-				1F4F616E27580B28003E7433 /* APIManager.swift */,
-				1F2727A5272F3C130039754D /* Main.storyboard */,
-				1F1A98FC27451DB9008C90CA /* traicion2.mp3 */,
-				1F2727A8272F3C140039754D /* Assets.xcassets */,
+				1FB711F027587CF20048BF50 /* TracksPickerView.swift */,
+				1FB711EE27587CED0048BF50 /* PlayListDetailController.swift */,
 				1F618C4A273DD8FD00883F2F /* UIImage+animatedGIF.m */,
+				1F2727A5272F3C130039754D /* Main.storyboard */,
 				1F2727AA272F3C140039754D /* LaunchScreen.storyboard */,
-				1F1A98B82744B7F0008C90CA /* ukulele.mp3 */,
-				1F618C49273DD8FD00883F2F /* UIImage+animatedGIF.h */,
-				1F2727AD272F3C140039754D /* Info.plist */,
 				1F618C48273DD8FC00883F2F /* bedu-Bridging-Header.h */,
+				1F2727AD272F3C140039754D /* Info.plist */,
 			);
 			path = bedu;
 			sourceTree = "<group>";
@@ -189,6 +188,29 @@
 				1F2727C2272F3C140039754D /* beduUITestsLaunchTests.swift */,
 			);
 			path = beduUITests;
+			sourceTree = "<group>";
+		};
+		1FB711F427587F190048BF50 /* Assets-folder */ = {
+			isa = PBXGroup;
+			children = (
+				1F1A98FC27451DB9008C90CA /* traicion2.mp3 */,
+				1F618C49273DD8FD00883F2F /* UIImage+animatedGIF.h */,
+				1F2727A8272F3C140039754D /* Assets.xcassets */,
+				1F1A98B82744B7F0008C90CA /* ukulele.mp3 */,
+				1F618C4C273DD9EE00883F2F /* stegosaurus-studio.gif */,
+			);
+			path = "Assets-folder";
+			sourceTree = "<group>";
+		};
+		1FB711F5275880710048BF50 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				1FE27F2F2734B11000C9F2CE /* Modelos.swift */,
+				1F4F616E27580B28003E7433 /* APIManager.swift */,
+				1FD768502734B3CE00B5117C /* Protocols.swift */,
+				1F4F617027580B31003E7433 /* DataManager.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 		31AC4252B3B4AAC7814322A2 /* Pods */ = {
@@ -397,6 +419,7 @@
 			files = (
 				1FD1A9E327394C350025028B /* apunts.swift in Sources */,
 				1F4F617127580B31003E7433 /* DataManager.swift in Sources */,
+				1FB711EF27587CED0048BF50 /* PlayListDetailController.swift in Sources */,
 				1F618C4B273DD8FD00883F2F /* UIImage+animatedGIF.m in Sources */,
 				1FD1AA332739C16C0025028B /* TracksTableViewController.swift in Sources */,
 				1FF86253273157E60070CAFE /* RegisterViewController.swift in Sources */,
@@ -404,10 +427,11 @@
 				1F2727A4272F3C130039754D /* LoginViewController.swift in Sources */,
 				1F4F616F27580B28003E7433 /* APIManager.swift in Sources */,
 				1F2727A0272F3C130039754D /* AppDelegate.swift in Sources */,
-				1F798725275865D100F94ED1 /* TracksPickerView.swift in Sources */,
+				1FB711F327587CF80048BF50 /* PlayButton.swift in Sources */,
 				1F618C47273DD85600883F2F /* TrackTableViewCell.swift in Sources */,
 				1F2727A2272F3C130039754D /* SceneDelegate.swift in Sources */,
 				1FF8625527315EA30070CAFE /* MainViewController.swift in Sources */,
+				1FB711F127587CF20048BF50 /* TracksPickerView.swift in Sources */,
 				1FD768512734B3CE00B5117C /* Protocols.swift in Sources */,
 				1FD7685327356F5400B5117C /* AudioPlayerViewController.swift in Sources */,
 			);
