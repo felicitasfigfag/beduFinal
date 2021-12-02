@@ -1,0 +1,101 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2580
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fnil\fcharset0 Menlo-Regular;}
+{\colortbl;\red255\green255\blue255;\red255\green255\blue255;\red31\green31\blue36;\red115\green167\blue78;
+}
+{\*\expandedcolortbl;;\csgenericrgb\c100000\c100000\c100000\c85000;\csgenericrgb\c12054\c12284\c14131;\csgenericrgb\c44940\c65475\c30460;
+}
+\margl1440\margr1440\vieww9000\viewh8400\viewkind0
+\deftab741
+\pard\tx741\pardeftab741\pardirnatural\partightenfactor0
+
+\f0\fs30 \cf2 \cb3 \
+\cf4 class LoginViewController: UIViewController , UITableViewDelegate\{\cf2 \
+\
+esto es el protocolo. Los necesito par llenar una tabla\
+Delegate: en cualquier clase controla que es lo que va a pasar con la tabla.LOs eventos\
+\
+DATA SOURCE: la informacion que va a aparcer en la tabla.\
+uitableviewcontroller es una especializacion de uiview controller que ya incluye\
+el view delegate y el data source\
+\
+\
+Hay otro componente de tablas:\
+\
+picker.\
+1- Elegimos el date picker desde el views. Este es una especializacion del picker view.\
+\
+2- Propiedades: text field.\
+PICKER VIEW\
+Cada columna es un componente. Importar clase UIpickerviewdelegate y  uipickerviewDATASOURCE\
+\
+METODOS\
+Number of components (estas son las columnas o cilindros)\
+Number of rows in component: \
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\cf2 DidSelectRow: cuando se mueve el cilindro, cambia lo seleccionado.\
+if let:; si es nulo pasa al else\
+Input view es una prop de textfield, por lo general aparece el teclado, si cambio el inputview puedo poner el date, para restringir yh controlar lo que esta introduciendo el user. usamos uipicker\
+\
+func touchesBegan - cuando toca la vista se termina la edicion.\
+seelf.view.endEditing(true)\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\cf2 \
+\pard\tx741\pardeftab741\pardirnatural\partightenfactor0
+\cf2 esto es el ejemplo e3 que descargamos.\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+}
