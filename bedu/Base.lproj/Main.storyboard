@@ -12,7 +12,7 @@
         <!--Login View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="LoginViewController" customModule="bedu" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="LoginViewController" customModule="newbedu" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -138,7 +138,7 @@
         <!--Register View Controller-->
         <scene sceneID="E7M-Y1-oUZ">
             <objects>
-                <viewController id="guR-tF-Ace" customClass="RegisterViewController" customModule="bedu" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="guR-tF-Ace" customClass="RegisterViewController" customModule="newbedu" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Zbc-Fb-fg5">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -284,23 +284,67 @@
         <!--Audio Player View Controller-->
         <scene sceneID="6d6-h6-yEi">
             <objects>
-                <viewController storyboardIdentifier="SongViewController" id="NDv-M4-3pP" customClass="AudioPlayerViewController" customModule="bedu" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SongViewController" modalPresentationStyle="fullScreen" id="NDv-M4-3pP" customClass="AudioPlayerViewController" customModule="newbedu" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Na4-VB-KoQ">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gX2-Vg-2eB">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="NUf-FT-5t8"/>
                         <color key="backgroundColor" systemColor="systemGray6Color"/>
                     </view>
                     <navigationItem key="navigationItem" id="nGC-g3-7jE"/>
+                    <connections>
+                        <outlet property="videoLayer" destination="gX2-Vg-2eB" id="0b8-9Q-owW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vM4-xD-IzA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3991" y="897"/>
+            <point key="canvasLocation" x="3989.8550724637685" y="896.65178571428567"/>
+        </scene>
+        <!--Video View Controller-->
+        <scene sceneID="MJL-LE-rbS">
+            <objects>
+                <viewController id="ZI7-Xx-4vi" customClass="VideoViewController" customModule="newbedu" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ODX-O1-8K7">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PD6-mv-8iC">
+                                <rect key="frame" x="65" y="89" width="284" height="49"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="TELL THEM">
+                                        <attributes>
+                                            <color key="NSColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <font key="NSFont" size="46" name="ArialRoundedMTBold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="grx-zS-bcm"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                    <connections>
+                        <outlet property="videoLayer" destination="ODX-O1-8K7" id="voW-pd-E3U"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fhO-CO-ZBK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4753.6231884057979" y="900.66964285714278"/>
         </scene>
         <!--HOME-->
         <scene sceneID="u0C-GY-hQc">
             <objects>
-                <viewController storyboardIdentifier="mainController" id="V7Q-ix-nUr" customClass="MainViewController" customModule="bedu" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="mainController" id="V7Q-ix-nUr" customClass="MainViewController" customModule="newbedu" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="aDR-n9-B5z">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -358,13 +402,13 @@
         <!--TabBarController-->
         <scene sceneID="zRm-jf-MCd">
             <objects>
-                <tabBarController storyboardIdentifier="tabBarController" title="TabBarController" id="tH6-41-NZA" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="tabBarController" title="TabBarController" id="tH6-41-NZA" customClass="CustomTabBarvc" customModule="newbedu" customModuleProvider="target" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="axS-FZ-KhC"/>
-                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="9f2-YO-lqv">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="9f2-YO-lqv" customClass="TabBarVC" customModule="newbedu" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" systemColor="tertiarySystemGroupedBackgroundColor"/>
-                        <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="selectedImageTintColor" systemColor="tintColor"/>
                     </tabBar>
                     <connections>
@@ -377,10 +421,10 @@
             </objects>
             <point key="canvasLocation" x="1748" y="435"/>
         </scene>
-        <!--MUSIC-->
+        <!--Tracks Table View Controller-->
         <scene sceneID="VCZ-r7-dUF">
             <objects>
-                <tableViewController id="K96-Cq-hqT" customClass="TracksTableViewController" customModule="bedu" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="K96-Cq-hqT" customClass="TracksTableViewController" customModule="newbedu" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="Cre-ON-Ohg">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -400,7 +444,7 @@
                             <outlet property="delegate" destination="K96-Cq-hqT" id="wuQ-4A-qrN"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="MUSIC" image="nota" id="EzT-pl-cLE"/>
+                    <tabBarItem key="tabBarItem" title="" id="EzT-pl-cLE"/>
                     <navigationItem key="navigationItem" id="KoD-ub-ABw"/>
                     <connections>
                         <segue destination="NDv-M4-3pP" kind="show" identifier="goToAudioPlayer" id="eVf-yC-hGP"/>
@@ -413,15 +457,15 @@
         <!--Playlist-->
         <scene sceneID="8lv-KE-DMJ">
             <objects>
-                <viewController id="x9V-9r-SSM" customClass="PlayListDetailController" customModule="bedu" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PlaylistView" id="x9V-9r-SSM" customClass="PlayListDetailController" customModule="newbedu" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="WSq-M3-XqA">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="2CD-dh-80m"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Playlist" selectedImage="list.dash" catalog="system" id="pfA-pf-kV2">
-                        <color key="badgeColor" red="0.53934780299999996" green="0.6336050205" blue="0.98445254559999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <tabBarItem key="tabBarItem" title="Playlist" image="list.dash" catalog="system" selectedImage="list.dash" id="pfA-pf-kV2">
+                        <color key="badgeColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBarItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QkB-yi-Awi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -430,13 +474,12 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="lYv-cE-v8H"/>
+        <segue reference="Aag-Ob-5bN"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="homekit" catalog="system" width="128" height="106"/>
         <image name="list.dash" catalog="system" width="128" height="85"/>
         <image name="music.mic" catalog="system" width="128" height="121"/>
-        <image name="nota" width="24" height="24"/>
         <namedColor name="AccentColor">
             <color red="0.19607843137254902" green="0.67843137254901964" blue="0.90196078431372551" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
@@ -460,9 +503,6 @@
         </systemColor>
         <systemColor name="systemGreenColor">
             <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="tertiarySystemGroupedBackgroundColor">
-            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="tintColor">
             <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

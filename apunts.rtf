@@ -32,7 +32,7 @@ METODOS\
 Number of components (estas son las columnas o cilindros)\
 Number of rows in component: \
 \
-\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab741\pardirnatural\partightenfactor0
 \cf2 DidSelectRow: cuando se mueve el cilindro, cambia lo seleccionado.\
 if let:; si es nulo pasa al else\
 Input view es una prop de textfield, por lo general aparece el teclado, si cambio el inputview puedo poner el date, para restringir yh controlar lo que esta introduciendo el user. usamos uipicker\
@@ -40,10 +40,18 @@ Input view es una prop de textfield, por lo general aparece el teclado, si cambi
 func touchesBegan - cuando toca la vista se termina la edicion.\
 seelf.view.endEditing(true)\
 \
-\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
-\cf2 \
+\
 \pard\tx741\pardeftab741\pardirnatural\partightenfactor0
 \cf2 esto es el ejemplo e3 que descargamos.\
+\
+\
+@objc func handleTap(_ sender: UITapGestureRecognizer) \{\
+        let version = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String ?? ""\
+        let compile = Bundle.main.infoDictionary?["CFBundleVersion"] as? String ?? ""\
+        let appName = Bundle.main.infoDictionary?["CFBundleName"] as? String ?? ""\
+        let message = "Version: \\(version)\\n Compile: \\(compile)\\n \\(appName)"\
+        alertOK(title: "", message: message, action: "OK")\
+    \}\
 \
 \
 \

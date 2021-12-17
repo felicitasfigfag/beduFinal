@@ -1,8 +1,8 @@
 //
 //  PlayButton.swift
-//  MyApp
+//  bedu
 //
-//  Created by Jan Zelaznog on 09/11/21.
+//  Created by Felicitas Figuero Fagalde on 1/12/2021.
 //
 
 import UIKit

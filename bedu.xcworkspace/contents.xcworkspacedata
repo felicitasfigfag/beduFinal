@@ -2,7 +2,7 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:bedu.xcodeproj">
+      location = "group:/Users/felicitasfiguerofagalde/Desktop/backup_bedu_final/newbedu.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:Pods/Pods.xcodeproj">

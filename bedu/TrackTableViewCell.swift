@@ -1,8 +1,8 @@
 //
 //  TrackTableViewCell.swift
-//  MyApp
+//  bedu
 //
-//  Created by Jan Zelaznog on 13/10/21.
+//  Created by Felicitas Figuero Fagalde on 20/11/2021.
 //
 
 import UIKit
@@ -39,14 +39,31 @@ class TrackTableViewCell: UITableViewCell {
         return lbl
     }()
     //aca tomarlo con un evento y mandarle la funcion
-    var botonPlay: UIButton = {
-        let btn = UIButton()
-        btn.setImage(UIImage(named:"play"), for: .normal)
-        btn.backgroundColor = UIColor(named: "Color3")
+    var botonPlay: PlayButton = {
+        let btn = PlayButton()
+      //  btn.setImage(UIImage(named:"play"), for: .normal)
+        
         btn.layer.cornerRadius = 25
+        btn.backgroundColor = .clear
+        btn.icon = UIImage(named: "play")
+        btn.secondIcon = UIImage(named: "pause")
+        btn.performTwoStateSelection()
         btn.translatesAutoresizingMaskIntoConstraints = false
         return btn
     }()
+    
+    
+//    var botonMenu: MenuButton = {
+//        let btn = MenuButton()
+//        btn.layer.cornerRadius = 25
+//        btn.backgroundColor = .clear
+//        //btn.icon = UIImage(systemName: "ellipsis")
+//        btn.setImage(UIImage(systemName: "ellipsis"), for: .normal)
+//        btn.translatesAutoresizingMaskIntoConstraints = false
+//        btn.menu = addMenuItems()
+//        btn.showsMenuAsPrimaryAction = true
+//
+//    }()
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -73,6 +90,17 @@ class TrackTableViewCell: UITableViewCell {
             botonPlay.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -15),
             botonPlay.widthAnchor.constraint(equalTo: botonPlay.heightAnchor)
         ])
+        botonPlay.addTarget(self, action: #selector( self.botonPlayTouch(_ :)), for:.touchUpInside)
+        
+//        addSubview(botonMenu)
+//        NSLayoutConstraint.activate([
+//            botonMenu.topAnchor.constraint(equalTo: topAnchor, constant: 15),
+//            botonMenu.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -15),
+//            botonMenu.trailingAnchor.constraint(equalTo: trailingAnchor, constant: 0),
+//            botonMenu.widthAnchor.constraint(equalTo: botonMenu.heightAnchor)
+//        ])
+//        botonMenu.addTarget(self, action: #selector(menuFunc), for:.touchUpInside)
+//
         addSubview(titulo)
         NSLayoutConstraint.activate([
             titulo.topAnchor.constraint(equalTo: topAnchor, constant: 10),
@@ -88,20 +116,30 @@ class TrackTableViewCell: UITableViewCell {
             artista.trailingAnchor.constraint(equalTo: botonPlay.leadingAnchor, constant: -5)
         ])
         contentView.isUserInteractionEnabled = false
-        botonPlay.addTarget(self, action: #selector( self.botonPlayTouch(_ :)), for:.touchUpInside)
+        
+        
+   
+        
+        
     }
 
 
 //
    @objc func botonPlayTouch(_ sender:UIButton!) {
+       botonPlay.performTwoStateSelection()
+       
        if parent != nil {
            parent?.buttonTouchedOnCell(aCell: self)
-           print("This is the track ------------------", track)
+           
+//           DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+//               self.botonPlay.performTwoStateSelection()
+//           }
        }
         else{
             print("TOUCH")
             }
     }
+   
 //    el gotoaudio no me lo agarra
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")

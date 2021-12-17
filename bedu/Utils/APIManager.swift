@@ -36,9 +36,9 @@ class APIManager {
                     let songs = dict["songs"] as! [[String:Any]]
                     let songsData = try JSONSerialization.data(withJSONObject: songs, options: .fragmentsAllowed)
                     let result = try JSONDecoder().decode([Track].self, from: songsData)
-                    
+                   
                     completion (result, nil)
-                     print(result)
+                    
                 }
                 catch {
                     print(String(describing: error))
