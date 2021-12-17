@@ -13,8 +13,8 @@ class TracksTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.tableView.backgroundColor = .black
-        
+        //self.tableView.backgroundColor = UIColor(named: "Color1")
+        self.tableView.backgroundView = UIImageView(image: UIImage(named: "background"))
         self.tableView.rowHeight = 80
         self.tableView.register(TrackTableViewCell.self, forCellReuseIdentifier: "reuseIdentifier")
         self.tableView.delegate = self
@@ -158,7 +158,7 @@ class TracksTableViewController: UITableViewController {
        
         //configure the cell
 
-        cell.backgroundColor = UIColor(named: "Color1")
+        cell.backgroundColor = .clear
         cell.textLabel?.textColor = UIColor(named: "Color2")
         
         let track = misTracks[indexPath.row]

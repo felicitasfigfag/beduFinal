@@ -47,6 +47,7 @@ class AudioPlayerViewController: UIViewController {
             print("Ocurrio un error")
         }
         playVideo()
+        play()
         
         
         
@@ -128,13 +129,23 @@ class AudioPlayerViewController: UIViewController {
             menuBtn.autoresizingMask = .flexibleWidth
 
         //llamada al menu
-        menuBtn.frame=CGRect(x: 160, y: 300, width: 40, height: 40)
+        menuBtn.frame=CGRect(x: 350, y: 40, width: 40, height: 40)
         menuBtn.addTarget(self, action: #selector(menuFunc), for: .touchUpInside)
         menuBtn.menu = addMenuItems()
         menuBtn.showsMenuAsPrimaryAction = true
         self.view.addSubview(menuBtn)
         
-
+        let closeBtn = UIButton(type: .system)
+        closeBtn.setImage(UIImage(systemName: "xmark"), for: .normal)
+        closeBtn.autoresizingMask = .flexibleWidth
+        closeBtn.translatesAutoresizingMaskIntoConstraints=true
+        closeBtn.tintColor = .white
+        closeBtn.layer.cornerRadius = 10
+        closeBtn.autoresizingMask = .flexibleWidth
+        
+        closeBtn.frame=CGRect(x: 20, y: 40, width: 40, height: 40)
+        closeBtn.addTarget(self, action: #selector(closeFunc), for: .touchUpInside)
+        self.view.addSubview(closeBtn)
         
         
         
@@ -198,6 +209,7 @@ class AudioPlayerViewController: UIViewController {
     @objc func pause(){
         song?.stop()
         timer.invalidate()
+        print("PAUSa")
         //traer un delegado de botonplay
             //self.botonPlay.performTwoStateSelection()
     }
@@ -224,16 +236,25 @@ class AudioPlayerViewController: UIViewController {
     
     
     //--------------------------------------------------
+    @IBAction func dismiss(_ sender: Any) {
+       dismiss(animated: true, completion: nil)
+     }
     @objc func menuFunc(){
         //song?.stop()
         //timer.invalidate()
         print("estos son mis tracks desde el menu")
+        
         print(misTracks)
        
     }
-    @IBAction func dismiss(_ sender: Any) {
-       dismiss(animated: true, completion: nil)
-     }
+    @objc func closeFunc(){
+        print("dismiss")
+       // self.botonPlay.performTwoStateSelection()
+        pause()
+        dismiss(animated: true, completion: nil)
+       
+    }
+    
     
     func addMenuItems() -> UIMenu {
 //        var like = Bool()
@@ -251,6 +272,7 @@ class AudioPlayerViewController: UIViewController {
                             
                              
                              self.delegate?.deleteTrack(trackLocation : self.indexCancion!)
+                             self.pause()
                              let alert = UIAlertController(title: "Exito", message: "Borraste \(self.tituloCancion!)", preferredStyle: .alert)
                              alert.addAction(UIAlertAction(title: "Ok", style: .default, handler:{_ in
                                  self.dismiss(animated: true, completion: nil)
@@ -275,26 +297,26 @@ class AudioPlayerViewController: UIViewController {
                      handler: {(_) in
                          DownloadManager.shared.startDownload(url: URL(string: "https://speed.hetzner.de/100MB.bin")!)
             }),
-            UIAction(title: "Add to a Playlist...",
-                     image: UIImage(systemName: "text.badge.plus"),
-                     handler: { [self](_) in
+//            UIAction(title: "Add to a Playlist...",
+//                     image: UIImage(systemName: "text.badge.plus"),
+//                     handler: { [self](_) in
+////                         let playlistView = PlayListDetailController()
+////                         self.delegadoPlaylist = playlistView.self
+////                         print("PLAYLIST DESDE AUDIOPLAYER______________________")
+////                         print(playlistView.tracksArray )
+////                         if self.delegadoPlaylist != nil {                          delegadoPlaylist?.addTrackto(track: miCancion as! Track)
+////                        }
+//
 //                         let playlistView = PlayListDetailController()
 //                         self.delegadoPlaylist = playlistView.self
-//                         print("PLAYLIST DESDE AUDIOPLAYER______________________")
-//                         print(playlistView.tracksArray )
-//                         if self.delegadoPlaylist != nil {                          delegadoPlaylist?.addTrackto(track: miCancion as! Track)
-//                        }
-               
-                         let playlistView = PlayListDetailController()
-                         self.delegadoPlaylist = playlistView.self
-                         if self.delegadoPlaylist != nil {
-                             let track = miCancion
-                             self.delegadoPlaylist?.addTrackto(track: track as! Track)
-                             
-                             playlistView.playlist.reloadData()
-                         }
-                     }),
-            
+//                         if self.delegadoPlaylist != nil {
+//                             let track = miCancion
+//                             self.delegadoPlaylist?.addTrackto(track: track as! Track)
+//
+//                             playlistView.playlist.reloadData()
+//                         }
+//                     }),
+//
             
             UIAction(title: "Share Song...",
                      image: UIImage(systemName: "square.and.arrow.up"),

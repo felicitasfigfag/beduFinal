@@ -1,69 +1,61 @@
 //
-//  GreenViewController.swift
-//  bedu
+//  RegisterViewController.swift
+//  MyApp
 //
-//  Created by Felicitas Figuero Fagalde on 02/11/2021.
+//  Created by Jan Zelaznog on 10/10/21.
 //
 
 import UIKit
 
 class RegisterViewController: UIViewController {
-//label
-    @IBOutlet weak var regTitle: UILabel!
-    @IBOutlet weak var regMailTitle: UILabel!
-    @IBOutlet weak var regSocialLabel: UILabel!
-// input
     
-    @IBOutlet var viewRegister: UIView!
-    @IBOutlet weak var regUserInput: UITextField!
-//btns
+    var tipoError:Int = 0
     
-    var counter: Int = 0
-    var colorsCount: Int = 3
-    @IBAction func signUpFacebook(_ sender: Any) {
-        
-        let color: String = "Color"
-        let colorName: String = color+"\(counter)"
-        counter += 1
-        viewRegister.backgroundColor = UIColor(named: colorName)
-        if counter > colorsCount{
-            counter = 1
-        }
-        
-    }
-    @IBAction func RegBtn(_ sender: Any) {
-        goToMainController()
+    @IBOutlet weak var label1: UILabel!
+    @IBOutlet weak var label2: UILabel!
+    @IBOutlet weak var label3: UILabel!
+    @IBOutlet weak var username: UITextField!
+    @IBOutlet weak var btn_facebook: UIButton!
+    
+    @IBAction func facebook(_ sender: Any) {
+        btn_facebook.backgroundColor = UIColor(named: "MainColor")
     }
     
     @IBAction func dismiss(_ sender: Any) {
-       dismiss(animated: true, completion: nil)
-     }
+        dismiss(animated: true)
+    }
+    
+    @IBAction func register(_ sender: Any) {
+        guard let username = username.text
+        else {
+            //self.username.errorAnimated()
+            print ("no se puede continuar")
+            return
+        }
+        if username != "" {
+            if !username.isValidEmail() {
+                //self.username.errorAnimated()
+                
+                //self.showSimpleAlert("el nombre de usuario debe ser un correo válido")
+                tipoError = 2
+                
+            }
+        }
+        else {
+            //self.username.errorAnimated()
+            //self.showSimpleAlert("el nombre de usuario no puede estar vacío")
+            tipoError = 1
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.view.backgroundColor = UIColor(named: "AccentColor")
+        label1.textColor = UIColor(named: "MainColor")
+        label2.textColor = UIColor(named: "MainColor")
+        label3.textColor = UIColor(named: "MainColor")
         // Do any additional setup after loading the view.
     }
-    func goToMainController(){
-        performSegue(withIdentifier: "regGoToTab", sender: self)
-//        let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "goToTab") as? TabBarController
-//       vc?.modalPresentationStyle = .fullScreen
-//
-//        guard let vc = vc else {return}
-//        present(vc, animated: true)
-    }
-
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        self.view.endEditing(true)
-    }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
+    
 
 }

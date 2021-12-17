@@ -18,7 +18,7 @@ class PlayButton: UIButton {
         self.layer.cornerRadius = self.frame.width/2
         self.clipsToBounds = true
         self.backgroundColor = .clear
-        self.tintColor = .systemGreen
+        self.tintColor = .black
     }
     
     func performTwoStateSelection() {

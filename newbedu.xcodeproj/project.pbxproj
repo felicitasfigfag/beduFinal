@@ -7,12 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1F1A98B92744B7F0008C90CA /* ukulele.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1F1A98B82744B7F0008C90CA /* ukulele.mp3 */; };
 		1F1A98F62744C31D008C90CA /* SwiftySound in Frameworks */ = {isa = PBXBuildFile; productRef = 1F1A98F52744C31D008C90CA /* SwiftySound */; };
-		1F1A98FD27451DB9008C90CA /* traicion2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1F1A98FC27451DB9008C90CA /* traicion2.mp3 */; };
 		1F2727A0272F3C130039754D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F27279F272F3C130039754D /* AppDelegate.swift */; };
 		1F2727A2272F3C130039754D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F2727A1272F3C130039754D /* SceneDelegate.swift */; };
-		1F2727A4272F3C130039754D /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F2727A3272F3C130039754D /* LoginViewController.swift */; };
 		1F2727A7272F3C130039754D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F2727A5272F3C130039754D /* Main.storyboard */; };
 		1F2727A9272F3C140039754D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1F2727A8272F3C140039754D /* Assets.xcassets */; };
 		1F2727AC272F3C140039754D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F2727AA272F3C140039754D /* LaunchScreen.storyboard */; };
@@ -33,6 +30,13 @@
 		1F40A778276BFE0A005AAFEE /* Fractul-SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1F40A775276BFE0A005AAFEE /* Fractul-SemiBold.otf */; };
 		1F40A779276BFE0A005AAFEE /* Fractul-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1F40A776276BFE0A005AAFEE /* Fractul-Medium.otf */; };
 		1F40A77A276BFE0A005AAFEE /* Fractul-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1F40A777276BFE0A005AAFEE /* Fractul-Regular.otf */; };
+		1F40A77C276C2047005AAFEE /* backgroundImg.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 1F40A77B276C2047005AAFEE /* backgroundImg.jpeg */; };
+		1F40A783276C4253005AAFEE /* UIButton+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F40A782276C4253005AAFEE /* UIButton+Extension.swift */; };
+		1F40A785276C4258005AAFEE /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F40A784276C4258005AAFEE /* UIImage+Extension.swift */; };
+		1F40A789276C4262005AAFEE /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F40A788276C4262005AAFEE /* UIView+Extension.swift */; };
+		1F40A78B276C42D2005AAFEE /* Dynamic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F40A78A276C42D2005AAFEE /* Dynamic.swift */; };
+		1F40A791276C47B0005AAFEE /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F40A790276C47B0005AAFEE /* LoginViewController.swift */; };
+		1F40A795276C4804005AAFEE /* RegViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F40A794276C4804005AAFEE /* RegViewController.swift */; };
 		1F4F616F27580B28003E7433 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F4F616E27580B28003E7433 /* APIManager.swift */; };
 		1F4F617127580B31003E7433 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F4F617027580B31003E7433 /* DataManager.swift */; };
 		1F4F617327580B5C003E7433 /* Network.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F4F617227580B5C003E7433 /* Network.framework */; };
@@ -50,7 +54,6 @@
 		1FD768512734B3CE00B5117C /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FD768502734B3CE00B5117C /* Protocols.swift */; };
 		1FD7685327356F5400B5117C /* AudioPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FD7685227356F5400B5117C /* AudioPlayerViewController.swift */; };
 		1FE27F302734B11000C9F2CE /* Modelos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FE27F2F2734B11000C9F2CE /* Modelos.swift */; };
-		1FF86253273157E60070CAFE /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FF86252273157E60070CAFE /* RegisterViewController.swift */; };
 		1FF8625527315EA30070CAFE /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FF8625427315EA30070CAFE /* MainViewController.swift */; };
 		F88B691852CB5ABD4C83877C /* Pods_bedu.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73C09D6E64C636A9E77B76BC /* Pods_bedu.framework */; };
 /* End PBXBuildFile section */
@@ -74,12 +77,9 @@
 
 /* Begin PBXFileReference section */
 		1E5164C54B05398694CD676B /* Pods-bedu.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-bedu.release.xcconfig"; path = "Target Support Files/Pods-bedu/Pods-bedu.release.xcconfig"; sourceTree = "<group>"; };
-		1F1A98B82744B7F0008C90CA /* ukulele.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = ukulele.mp3; sourceTree = "<group>"; };
-		1F1A98FC27451DB9008C90CA /* traicion2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = traicion2.mp3; sourceTree = "<group>"; };
 		1F27279C272F3C130039754D /* newbedu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = newbedu.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F27279F272F3C130039754D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1F2727A1272F3C130039754D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		1F2727A3272F3C130039754D /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		1F2727A6272F3C130039754D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1F2727A8272F3C140039754D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1F2727AB272F3C140039754D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -103,6 +103,13 @@
 		1F40A775276BFE0A005AAFEE /* Fractul-SemiBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Fractul-SemiBold.otf"; sourceTree = "<group>"; };
 		1F40A776276BFE0A005AAFEE /* Fractul-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Fractul-Medium.otf"; sourceTree = "<group>"; };
 		1F40A777276BFE0A005AAFEE /* Fractul-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Fractul-Regular.otf"; sourceTree = "<group>"; };
+		1F40A77B276C2047005AAFEE /* backgroundImg.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = backgroundImg.jpeg; path = "bedu/Assets-folder/backgroundImg.jpeg"; sourceTree = SOURCE_ROOT; };
+		1F40A782276C4253005AAFEE /* UIButton+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIButton+Extension.swift"; sourceTree = "<group>"; };
+		1F40A784276C4258005AAFEE /* UIImage+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
+		1F40A788276C4262005AAFEE /* UIView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		1F40A78A276C42D2005AAFEE /* Dynamic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dynamic.swift; sourceTree = "<group>"; };
+		1F40A790276C47B0005AAFEE /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = AudioPlayer/LoginViewController.swift; sourceTree = "<group>"; };
+		1F40A794276C4804005AAFEE /* RegViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegViewController.swift; sourceTree = "<group>"; };
 		1F4F616E27580B28003E7433 /* APIManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 		1F4F617027580B31003E7433 /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		1F4F617227580B5C003E7433 /* Network.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Network.framework; path = System/Library/Frameworks/Network.framework; sourceTree = SDKROOT; };
@@ -122,7 +129,6 @@
 		1FD768502734B3CE00B5117C /* Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
 		1FD7685227356F5400B5117C /* AudioPlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioPlayerViewController.swift; sourceTree = "<group>"; };
 		1FE27F2F2734B11000C9F2CE /* Modelos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Modelos.swift; sourceTree = "<group>"; };
-		1FF86252273157E60070CAFE /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		1FF8625427315EA30070CAFE /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		73C09D6E64C636A9E77B76BC /* Pods_bedu.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_bedu.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1779A13B6E4970170D1FF95 /* Pods-bedu.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-bedu.debug.xcconfig"; path = "Target Support Files/Pods-bedu/Pods-bedu.debug.xcconfig"; sourceTree = "<group>"; };
@@ -184,16 +190,17 @@
 		1F27279E272F3C130039754D /* bedu */ = {
 			isa = PBXGroup;
 			children = (
+				1F40A77D276C3A2F005AAFEE /* TabBar */,
 				1FB712012758F47B0048BF50 /* commons */,
 				1FB711F5275880710048BF50 /* Utils */,
 				1FB711F427587F190048BF50 /* Assets-folder */,
-				1FF86252273157E60070CAFE /* RegisterViewController.swift */,
-				1F2727A3272F3C130039754D /* LoginViewController.swift */,
 				1FF8625427315EA30070CAFE /* MainViewController.swift */,
 				1FB711F227587CF80048BF50 /* PlayButton.swift */,
 				1F3B7D5B27629B9C002EBB24 /* MenuButton.swift */,
 				1FB711FC2758E4820048BF50 /* AudioPlayer */,
 				1FD1AA322739C16C0025028B /* TracksTableViewController.swift */,
+				1F40A794276C4804005AAFEE /* RegViewController.swift */,
+				1F40A790276C47B0005AAFEE /* LoginViewController.swift */,
 				1F618C46273DD85600883F2F /* TrackTableViewCell.swift */,
 				1F40A757276AE515005AAFEE /* TracksPickerView.swift */,
 				1FB711EE27587CED0048BF50 /* PlayListDetailController.swift */,
@@ -234,15 +241,23 @@
 			path = Fonts;
 			sourceTree = "<group>";
 		};
+		1F40A77D276C3A2F005AAFEE /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				1F40A764276BD23F005AAFEE /* TabBarVC.swift */,
+				1F40A762276BCE00005AAFEE /* CustomTabBarVC.swift */,
+			);
+			path = TabBar;
+			sourceTree = "<group>";
+		};
 		1FB711F427587F190048BF50 /* Assets-folder */ = {
 			isa = PBXGroup;
 			children = (
 				1F40A774276BFE0A005AAFEE /* Fonts */,
-				1F1A98FC27451DB9008C90CA /* traicion2.mp3 */,
 				1F40A770276BF092005AAFEE /* songJB.mp3 */,
 				1F618C49273DD8FD00883F2F /* UIImage+animatedGIF.h */,
 				1F2727A8272F3C140039754D /* Assets.xcassets */,
-				1F1A98B82744B7F0008C90CA /* ukulele.mp3 */,
+				1F40A77B276C2047005AAFEE /* backgroundImg.jpeg */,
 				1F618C4C273DD9EE00883F2F /* stegosaurus-studio.gif */,
 			);
 			path = "Assets-folder";
@@ -251,6 +266,9 @@
 		1FB711F5275880710048BF50 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				1F40A782276C4253005AAFEE /* UIButton+Extension.swift */,
+				1F40A784276C4258005AAFEE /* UIImage+Extension.swift */,
+				1F40A788276C4262005AAFEE /* UIView+Extension.swift */,
 				1F40A760276AEDCB005AAFEE /* Extensions.swift */,
 				1FE27F2F2734B11000C9F2CE /* Modelos.swift */,
 				1FB711FA2758E1F10048BF50 /* UILabel+Extension.swift */,
@@ -258,8 +276,6 @@
 				1F40A759276AE5EE005AAFEE /* DownloadManager.swift */,
 				1F40A75B276AE72C005AAFEE /* RestServiceManager.swift */,
 				1F4F617027580B31003E7433 /* DataManager.swift */,
-				1F40A762276BCE00005AAFEE /* CustomTabBarVC.swift */,
-				1F40A764276BD23F005AAFEE /* TabBarVC.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -278,6 +294,7 @@
 		1FB712012758F47B0048BF50 /* commons */ = {
 			isa = PBXGroup;
 			children = (
+				1F40A78A276C42D2005AAFEE /* Dynamic.swift */,
 				1F27279F272F3C130039754D /* AppDelegate.swift */,
 				1FD768502734B3CE00B5117C /* Protocols.swift */,
 				1F2727A1272F3C130039754D /* SceneDelegate.swift */,
@@ -421,11 +438,10 @@
 				1F40A778276BFE0A005AAFEE /* Fractul-SemiBold.otf in Resources */,
 				1F2727A9272F3C140039754D /* Assets.xcassets in Resources */,
 				1F40A771276BF092005AAFEE /* songJB.mp3 in Resources */,
-				1F1A98B92744B7F0008C90CA /* ukulele.mp3 in Resources */,
 				1F40A779276BFE0A005AAFEE /* Fractul-Medium.otf in Resources */,
 				1F2727A7272F3C130039754D /* Main.storyboard in Resources */,
 				1FD1A9E527394C7F0025028B /* apunts.rtf in Resources */,
-				1F1A98FD27451DB9008C90CA /* traicion2.mp3 in Resources */,
+				1F40A77C276C2047005AAFEE /* backgroundImg.jpeg in Resources */,
 				1F40A77A276BFE0A005AAFEE /* Fractul-Regular.otf in Resources */,
 				1F618C4D273DD9EE00883F2F /* stegosaurus-studio.gif in Resources */,
 				1F40A773276BF233005AAFEE /* videoTemitas.mp4 in Resources */,
@@ -502,16 +518,19 @@
 				1F40A75C276AE72C005AAFEE /* RestServiceManager.swift in Sources */,
 				1F618C4B273DD8FD00883F2F /* UIImage+animatedGIF.m in Sources */,
 				1FD1AA332739C16C0025028B /* TracksTableViewController.swift in Sources */,
-				1FF86253273157E60070CAFE /* RegisterViewController.swift in Sources */,
 				1F40A765276BD23F005AAFEE /* TabBarVC.swift in Sources */,
+				1F40A795276C4804005AAFEE /* RegViewController.swift in Sources */,
+				1F40A783276C4253005AAFEE /* UIButton+Extension.swift in Sources */,
 				1F40A758276AE515005AAFEE /* TracksPickerView.swift in Sources */,
 				1FE27F302734B11000C9F2CE /* Modelos.swift in Sources */,
-				1F2727A4272F3C130039754D /* LoginViewController.swift in Sources */,
 				1FB711FB2758E1F10048BF50 /* UILabel+Extension.swift in Sources */,
 				1F4F616F27580B28003E7433 /* APIManager.swift in Sources */,
 				1F40A763276BCE00005AAFEE /* CustomTabBarVC.swift in Sources */,
 				1F2727A0272F3C130039754D /* AppDelegate.swift in Sources */,
 				1FB711FE2758E49E0048BF50 /* AudioPlayerViewModel.swift in Sources */,
+				1F40A78B276C42D2005AAFEE /* Dynamic.swift in Sources */,
+				1F40A789276C4262005AAFEE /* UIView+Extension.swift in Sources */,
+				1F40A791276C47B0005AAFEE /* LoginViewController.swift in Sources */,
 				1F40A75A276AE5EE005AAFEE /* DownloadManager.swift in Sources */,
 				1F40A769276BD969005AAFEE /* VideoViewController.swift in Sources */,
 				1F3B7D5C27629B9C002EBB24 /* MenuButton.swift in Sources */,
@@ -520,6 +539,7 @@
 				1F40A761276AEDCB005AAFEE /* Extensions.swift in Sources */,
 				1F2727A2272F3C130039754D /* SceneDelegate.swift in Sources */,
 				1FF8625527315EA30070CAFE /* MainViewController.swift in Sources */,
+				1F40A785276C4258005AAFEE /* UIImage+Extension.swift in Sources */,
 				1FD768512734B3CE00B5117C /* Protocols.swift in Sources */,
 				1FD7685327356F5400B5117C /* AudioPlayerViewController.swift in Sources */,
 			);
@@ -722,7 +742,7 @@
 				SWIFT_OBJC_BRIDGING_HEADER = "bedu/bedu-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -754,7 +774,7 @@
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "bedu/bedu-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

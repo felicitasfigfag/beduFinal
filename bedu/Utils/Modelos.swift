@@ -7,6 +7,15 @@
 
 import Foundation
 
+struct Account {
+    let user: String
+    let pass: String
+}
+
+struct Registered {
+  let user1: Account = Account(user: "felicitas@gmail.com", pass: "blablabla1")
+}
+
 
 struct Track: Codable, Hashable {
     let title: String?

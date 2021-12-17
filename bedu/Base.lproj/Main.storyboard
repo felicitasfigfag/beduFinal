@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="tH6-41-NZA">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
@@ -18,13 +18,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="752" ambiguous="YES" text="Enter your email or username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Riv-gQ-AT3">
-                                <rect key="frame" x="20" y="191" width="287" height="21"/>
-                                <color key="tintColor" red="0.53934780299999996" green="0.6336050205" blue="0.98445254559999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <rect key="frame" x="20" y="191" width="250.5" height="21"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="B8a-Ee-4aE"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="17"/>
-                                <color key="textColor" name="Color2"/>
+                                <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="19"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cg5-vd-gcO">
@@ -33,23 +33,9 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="34" id="elX-4B-IHt"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <textInputTraits key="textInputTraits" textContentType="email"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="253" verticalCompressionResistancePriority="751" ambiguous="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aIF-Lk-qvi">
-                                <rect key="frame" x="154.5" y="108" width="105.5" height="30"/>
-                                <color key="tintColor" systemColor="tintColor"/>
-                                <attributedString key="attributedText">
-                                    <fragment content="Sign in">
-                                        <attributes>
-                                            <color key="NSColor" name="Color2"/>
-                                            <font key="NSFont" size="25" name="Menlo-Bold"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                        </attributes>
-                                    </fragment>
-                                </attributedString>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T28-kH-wEt">
                                 <rect key="frame" x="170.5" y="811" width="73" height="31"/>
                                 <color key="tintColor" red="0.53934780299999996" green="0.6336050205" blue="0.98445254559999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -83,9 +69,9 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EMy-3Y-Xz7">
-                                <rect key="frame" x="20" y="271" width="82" height="21"/>
-                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="17"/>
-                                <color key="textColor" name="Color2"/>
+                                <rect key="frame" x="20" y="271" width="83.5" height="21"/>
+                                <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="19"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Vi2-jG-Ltj">
@@ -94,6 +80,13 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="253" verticalCompressionResistancePriority="751" ambiguous="YES" misplaced="YES" text="Sign in" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aIF-Lk-qvi">
+                                <rect key="frame" x="134" y="89" width="147" height="56"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="Arial-Black" family="Arial Black" pointSize="36"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="highlightedColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" name="Color1"/>
@@ -124,6 +117,7 @@
                     <navigationItem key="navigationItem" id="MAc-RX-Cxq"/>
                     <connections>
                         <outlet property="emailLabel" destination="Riv-gQ-AT3" id="YrI-mx-15f"/>
+                        <outlet property="loginView" destination="8bC-Xf-vdC" id="rJc-7g-rNi"/>
                         <outlet property="password" destination="Vi2-jG-Ltj" id="STS-Hi-qWh"/>
                         <outlet property="passwordLabel" destination="EMy-3Y-Xz7" id="tK9-Cx-WQm"/>
                         <outlet property="titleLabel" destination="aIF-Lk-qvi" id="gQF-ka-f4l"/>
@@ -133,44 +127,37 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="693" y="115"/>
+            <point key="canvasLocation" x="692.75362318840587" y="114.50892857142857"/>
         </scene>
-        <!--Register View Controller-->
+        <!--Reg View Controller-->
         <scene sceneID="E7M-Y1-oUZ">
             <objects>
-                <viewController id="guR-tF-Ace" customClass="RegisterViewController" customModule="newbedu" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="guR-tF-Ace" customClass="RegViewController" customModule="newbedu" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Zbc-Fb-fg5">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="752" text="Enter your email or username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1mK-ah-l4Q">
-                                <rect key="frame" x="20" y="112.5" width="287" height="21"/>
+                                <rect key="frame" x="20" y="113.5" width="224" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="Tv3-cg-g35"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="17"/>
-                                <color key="textColor" name="Color2"/>
+                                <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IBc-t1-03n">
-                                <rect key="frame" x="20" y="138.5" width="374" height="34"/>
+                                <rect key="frame" x="20" y="139.5" width="374" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="34" id="1sY-qo-7gi"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="253" verticalCompressionResistancePriority="751" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cdh-6B-138">
-                                <rect key="frame" x="154.5" y="29.5" width="105.5" height="30"/>
-                                <attributedString key="attributedText">
-                                    <fragment content="Sign up">
-                                        <attributes>
-                                            <color key="NSColor" name="Color2"/>
-                                            <font key="NSFont" size="25" name="Menlo-Bold"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                        </attributes>
-                                    </fragment>
-                                </attributedString>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="253" verticalCompressionResistancePriority="751" text="Sign up" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cdh-6B-138">
+                                <rect key="frame" x="141" y="20" width="132" height="40.5"/>
+                                <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="36"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="253" verticalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w0O-TM-vb4">
@@ -307,40 +294,6 @@
             </objects>
             <point key="canvasLocation" x="3989.8550724637685" y="896.65178571428567"/>
         </scene>
-        <!--Video View Controller-->
-        <scene sceneID="MJL-LE-rbS">
-            <objects>
-                <viewController id="ZI7-Xx-4vi" customClass="VideoViewController" customModule="newbedu" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="ODX-O1-8K7">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PD6-mv-8iC">
-                                <rect key="frame" x="65" y="89" width="284" height="49"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <attributedString key="attributedText">
-                                    <fragment content="TELL THEM">
-                                        <attributes>
-                                            <color key="NSColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            <font key="NSFont" size="46" name="ArialRoundedMTBold"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                        </attributes>
-                                    </fragment>
-                                </attributedString>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="grx-zS-bcm"/>
-                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    </view>
-                    <connections>
-                        <outlet property="videoLayer" destination="ODX-O1-8K7" id="voW-pd-E3U"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="fhO-CO-ZBK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="4753.6231884057979" y="900.66964285714278"/>
-        </scene>
         <!--HOME-->
         <scene sceneID="u0C-GY-hQc">
             <objects>
@@ -349,43 +302,31 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C2a-JN-Wsp">
-                                <rect key="frame" x="55.5" y="132" width="303.5" height="42"/>
-                                <attributedString key="attributedText">
-                                    <fragment content="TEMITAS PLAYER">
-                                        <attributes>
-                                            <color key="NSColor" red="0.53934780301564811" green="0.63360502051609002" blue="0.98445254559999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                            <font key="NSFont" size="36" name="Menlo-Bold"/>
-                                        </attributes>
-                                    </fragment>
-                                </attributedString>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="music.mic" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="3eq-Ae-xJD">
-                                <rect key="frame" x="87" y="217.5" width="240" height="127.5"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="240" id="coK-bX-Vpc"/>
-                                    <constraint firstAttribute="height" constant="128" id="vog-66-MDX"/>
-                                </constraints>
-                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nL6-gc-pdj">
                                 <rect key="frame" x="174.5" y="752" width="65" height="31"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="logout"/>
                                 <connections>
                                     <action selector="logoutWith_sender:" destination="V7Q-ix-nUr" eventType="touchUpInside" id="NHs-7I-hgc"/>
                                 </connections>
                             </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="music.mic" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="3eq-Ae-xJD">
+                                <rect key="frame" x="87" y="364" width="240" height="127.5"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="coK-bX-Vpc"/>
+                                    <constraint firstAttribute="height" constant="128" id="vog-66-MDX"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="K3l-sw-e9g"/>
                         <color key="backgroundColor" red="0.9662028533" green="0.88022254040000003" blue="0.98445254559999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
-                            <constraint firstItem="3eq-Ae-xJD" firstAttribute="top" secondItem="C2a-JN-Wsp" secondAttribute="bottom" constant="44" id="8BC-kj-Xtx"/>
-                            <constraint firstItem="C2a-JN-Wsp" firstAttribute="centerX" secondItem="K3l-sw-e9g" secondAttribute="centerX" id="Aog-1K-hbg"/>
                             <constraint firstItem="nL6-gc-pdj" firstAttribute="centerX" secondItem="K3l-sw-e9g" secondAttribute="centerX" id="FZd-cl-te9"/>
                             <constraint firstItem="K3l-sw-e9g" firstAttribute="bottom" secondItem="nL6-gc-pdj" secondAttribute="bottom" constant="30" id="VFH-PS-9LK"/>
                             <constraint firstItem="3eq-Ae-xJD" firstAttribute="centerX" secondItem="K3l-sw-e9g" secondAttribute="centerX" id="WGV-G3-5c7"/>
-                            <constraint firstItem="C2a-JN-Wsp" firstAttribute="top" secondItem="K3l-sw-e9g" secondAttribute="top" constant="88" id="Xft-rL-hGW"/>
+                            <constraint firstItem="3eq-Ae-xJD" firstAttribute="centerY" secondItem="K3l-sw-e9g" secondAttribute="centerY" id="abq-yZ-i2R"/>
                             <constraint firstItem="3eq-Ae-xJD" firstAttribute="centerX" secondItem="K3l-sw-e9g" secondAttribute="centerX" id="kAH-MY-dX5"/>
                         </constraints>
                     </view>
@@ -425,7 +366,7 @@
         <scene sceneID="VCZ-r7-dUF">
             <objects>
                 <tableViewController id="K96-Cq-hqT" customClass="TracksTableViewController" customModule="newbedu" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="Cre-ON-Ohg">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="onDrag" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="Cre-ON-Ohg">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -452,7 +393,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HDY-pB-TFF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3122" y="897"/>
+            <point key="canvasLocation" x="3121.739130434783" y="896.65178571428567"/>
         </scene>
         <!--Playlist-->
         <scene sceneID="8lv-KE-DMJ">
@@ -467,14 +408,17 @@
                     <tabBarItem key="tabBarItem" title="Playlist" image="list.dash" catalog="system" selectedImage="list.dash" id="pfA-pf-kV2">
                         <color key="badgeColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBarItem>
+                    <connections>
+                        <outlet property="playlistView" destination="WSq-M3-XqA" id="hFw-Zg-pxz"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QkB-yi-Awi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3136" y="1621"/>
+            <point key="canvasLocation" x="1938" y="1213"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Aag-Ob-5bN"/>
+        <segue reference="lYv-cE-v8H"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="homekit" catalog="system" width="128" height="106"/>

@@ -10,6 +10,8 @@ import UIKit
 
 class PlayListDetailController: UIViewController, TracksPickerDelegate, UITableViewDataSource, UITableViewDelegate {
     
+    @IBOutlet var playlistView: UIView!
+    
     let textField = UITextField()
     let pickerModal = UIButton(type: .custom)
     let playlist = UITableView()
@@ -17,31 +19,28 @@ class PlayListDetailController: UIViewController, TracksPickerDelegate, UITableV
     var tracksArray = [Track]()
     //var cancionDeAudioPlayer = String()
     
+    
+   
+    
     //delegate
     func addTrack(track: Track) {
-        print("Esta es la playlist al inicio", tracksArray)
-        print(track, "AGREGANDO ESTO")
         tracks.insert(track)
         tracksArray = Array(tracks)
-        print("ESTA ES LA PLAYLIST ", tracksArray)
         playlist.reloadData()
     }
-//    func addTrackto(track: Track) {
-//        print("________________________ESTOY VIVA")
-//        print("esto es la playlist hasta ahora", tracksArray)
-//           tracks.insert(track)
-//            print(track, "AGREGANDO ESTO")
-//           tracksArray = Array(tracks)
-//            print("ESTA ES LA PLAYLIST ", tracksArray)
-//           playlist.reloadData()
-//       }
+
 
 
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.addSubview(textField)
+        let backgroundImage = UIImageView(image: UIImage(named: "background"))
+      
+        view.insertSubview(backgroundImage, at: 0) // 2
+       
         textField.placeholder = "Playlist..."
-        textField.backgroundColor = .white
+        textField.backgroundColor = UIColor(named: "Purple")
+        textField.tintColor = .white
         textField.translatesAutoresizingMaskIntoConstraints = false
         textField.topAnchor.constraint(equalTo:self.view.topAnchor, constant: 50).isActive = true
         textField.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20).isActive = true
@@ -49,6 +48,8 @@ class PlayListDetailController: UIViewController, TracksPickerDelegate, UITableV
         textField.heightAnchor.constraint(equalToConstant: 50).isActive = true
         
         self.view.addSubview(pickerModal)
+        pickerModal.backgroundColor = UIColor(named: "MedPurpleTr")
+        pickerModal.tintColor = .white
         pickerModal.setImage(UIImage(systemName: "plus.rectangle.fill.on.rectangle.fill"), for: .normal)
         pickerModal.translatesAutoresizingMaskIntoConstraints=false
         pickerModal.topAnchor.constraint(equalTo:self.view.topAnchor, constant: 50).isActive = true
@@ -63,8 +64,8 @@ class PlayListDetailController: UIViewController, TracksPickerDelegate, UITableV
         playlist.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20).isActive = true
         playlist.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20).isActive = true
         playlist.bottomAnchor.constraint(equalTo:view.bottomAnchor, constant: -20).isActive = true
-        playlist.backgroundColor = .white
-        playlist.separatorColor = UIColor(named: "Color2")
+        playlist.backgroundColor = UIColor(named: "MedPurpleTr")
+        playlist.separatorColor = UIColor(named: "MedPurple")
         playlist.separatorStyle = .singleLine
         playlist.register(UITableViewCell.self, forCellReuseIdentifier: "track")
         playlist.dataSource = self
@@ -89,7 +90,7 @@ class PlayListDetailController: UIViewController, TracksPickerDelegate, UITableV
          let cell = tableView.dequeueReusableCell(withIdentifier: "track", for: indexPath)
          let track = tracksArray[indexPath.row]
          cell.textLabel?.text = track.title
-         cell.backgroundColor = UIColor(named: "Color1")
+         cell.backgroundColor = UIColor(named: "LigthPurple")
          return cell
      }
 }
@@ -98,12 +99,8 @@ extension PlayListDetailController: TracksDelegate {
 
 
     func addTrackto(track: Track) {
-        print("________________________ESTOY VIVA")
-        print("esto es la playlist hasta ahora", tracksArray)
            tracks.insert(track)
-            print(track, "AGREGANDO ESTO")
            tracksArray = Array(tracks)
-            print("ESTA ES LA PLAYLIST ", tracksArray)
            playlist.reloadData()
        }
 

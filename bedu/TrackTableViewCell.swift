@@ -12,21 +12,22 @@ class TrackTableViewCell: UITableViewCell {
     var track:Track?
     var parent:ButtonOnCellDelegate?
     
-   
+    
     
     var icono: UIImageView = {
         let imgView = UIImageView()
         imgView.contentMode = .scaleAspectFit
         imgView.image = UIImage(named: "nota")
-        imgView.backgroundColor = .white
+        imgView.backgroundColor = UIColor(named: "MedPurpleTr")
         imgView.translatesAutoresizingMaskIntoConstraints = false
         return imgView
     }()
     
     var titulo: UILabel = {
         let lbl = UILabel()
-        lbl.textColor = UIColor(named: "Color2")
+        lbl.textColor = .white
         lbl.text = "titulo"
+        lbl.font = UIFont(name: "Fractul-Medium", size: 20)
         lbl.translatesAutoresizingMaskIntoConstraints = false
         return lbl
     }()
@@ -35,18 +36,17 @@ class TrackTableViewCell: UITableViewCell {
         let lbl = UILabel()
         lbl.textColor = .lightGray
         lbl.text = "artista"
+        lbl.font = UIFont(name: "Fractul-Regular", size: 16)
         lbl.translatesAutoresizingMaskIntoConstraints = false
         return lbl
     }()
     //aca tomarlo con un evento y mandarle la funcion
     var botonPlay: PlayButton = {
         let btn = PlayButton()
-      //  btn.setImage(UIImage(named:"play"), for: .normal)
-        
         btn.layer.cornerRadius = 25
-        btn.backgroundColor = .clear
-        btn.icon = UIImage(named: "play")
-        btn.secondIcon = UIImage(named: "pause")
+        btn.backgroundColor = UIColor(named: "LigthPurpleTr")
+        btn.icon = UIImage(systemName: "play.fill")
+        btn.secondIcon = UIImage(systemName: "pause.fill")
         btn.performTwoStateSelection()
         btn.translatesAutoresizingMaskIntoConstraints = false
         return btn
@@ -78,9 +78,9 @@ class TrackTableViewCell: UITableViewCell {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         addSubview(icono)
         NSLayoutConstraint.activate([
-            icono.topAnchor.constraint(equalTo: topAnchor, constant: 5),
-            icono.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -5),
-            icono.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 5),
+            icono.topAnchor.constraint(equalTo: topAnchor, constant: 10),
+            icono.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -10),
+            icono.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 10),
             icono.widthAnchor.constraint(equalTo: icono.heightAnchor)
         ])
         addSubview(botonPlay)
@@ -131,9 +131,9 @@ class TrackTableViewCell: UITableViewCell {
        if parent != nil {
            parent?.buttonTouchedOnCell(aCell: self)
            
-//           DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
-//               self.botonPlay.performTwoStateSelection()
-//           }
+           DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+               self.botonPlay.performTwoStateSelection()
+           }
        }
         else{
             print("TOUCH")

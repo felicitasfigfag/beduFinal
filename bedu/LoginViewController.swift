@@ -1,77 +1,71 @@
 //
-//  ViewController.swift
-//  bedu
+//  LoginViewController.swift
+//  MyApp
 //
-//  Created by Felicitas Figuero Fagalde on 31/10/2021.
-// LOGIN
+//  Created by Jan Zelaznog on 20/11/21.
+//
 
 import UIKit
 
 class LoginViewController: UIViewController {
-   //labels
-    @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var emailLabel: UILabel!
-    @IBOutlet weak var passwordLabel: UILabel!
+    // variable para conectar con el viewModel
+    var viewModel: LoginViewModel?
     
-    //inputs
-    
-    @IBOutlet weak var user: UITextField!
+    @IBOutlet weak var label1: UILabel!
+    @IBOutlet weak var label2: UILabel!
+    @IBOutlet weak var username: UITextField!
     @IBOutlet weak var password: UITextField!
+    @IBOutlet weak var login: UIButton!
+    @IBOutlet weak var register: UIButton!
     
-    //btns
-    @IBAction func `continue`(_ sender: UIButton) {
-        printFunction()
-        let pass = self.password.text
-        let email = self.user.text
-        
-//        c amiar por un guard let
-//        touches began & view.end editing
-        
-        let resultPass = validatePassword(value: pass!)
-       let resultEmail = validateEmail(email: email!)
-
-        
-        if user !== nil && password !== nil && resultPass == true {
-            print("Puede pasar")
-            goToMainController()
-            
-        }else if !resultPass{
-            print("La contrasena debe tener 10 o mas caracteres")
-        }
-        else{
-            print("Faltan datos")
-        }}
-
-    func goToMainController(){
-        performSegue(withIdentifier: "goToTab", sender: self)
-//        let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "goToTab") as? TabBarController
-//       vc?.modalPresentationStyle = .fullScreen
-//
-//        guard let vc = vc else {return}
-//        present(vc, animated: true)
+    @IBAction func `continue`(_ sender: Any) {
+        viewModel?.botonLoginTouch(user: username.text, pass: password.text)
     }
     
-    
-    func printFunction(name: String = #function){
-        print(name)
+    @IBAction func signup(_ sender: Any) {
+        performSegue(withIdentifier: "signUp", sender: self)
     }
-    func validatePassword(value: String) -> Bool {
-        return value.count > 10
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+      self.view.endEditing(true)
     }
-    func validateEmail(email: String) -> Bool {
-       return email.contains("@")
-           
-       }
-    
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
-        
+        self.view.backgroundColor = UIColor(named: "AccentColor")
+        label1.textColor = UIColor(named: "MainColor")
+        label2.textColor = UIColor(named: "MainColor")
+        // personalizar la interfaz usando las extensiones
+        self.view.setGradientBackground()
+        //label1.activateGradientColor = true
+        login.customize()
+        register.customize()
+        //username.startInController()
+        //password.startInController()
+        // conectar con el viewModel
+        bindViewModel()
     }
 
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        self.view.endEditing(true)
-    }}
+    func bindViewModel() {
+        viewModel = LoginViewModel()
+        viewModel?.mensajeError.bind({ (mensajeError) in
+            DispatchQueue.main.async {
+                if mensajeError != nil {
+                    //self.showSimpleAlert(mensajeError!)
+                    //self.username.errorAnimated()
+                    //self.password.errorAnimated()
+                }
+                else {
+                    self.goToMainViewController()
+                }
+            }
+        })
+    }
+     
 
+    
+    func goToMainViewController() {
+        performSegue(withIdentifier: "loginOK", sender: self)
+    }
+    
+}
